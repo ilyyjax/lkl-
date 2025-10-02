@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MEOW OR NEVER</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">😼 MEOW OR NEVER</div>
+    <nav>
+      <button id="buyBtn" class="btn primary">Buy $MEOW</button>
+      <button id="copyBtn" class="btn secondary" data-ca="0xYOUR_CONTRACT_ADDRESS_HERE">Copy CA</button>
+      <a href="#" id="dexLink" target="_blank" class="btn link">Dexscreener</a>
+      <a href="#" id="xLink" target="_blank" class="btn link">Community</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>MEOW OR NEVER</h1>
+      <p>The cleanest meme gallery on the blockchain. No tax, no nonsense — just meows.</p>
+      <div class="stats">
+        <div class="stat"><span>Supply</span>1B</div>
+        <div class="stat"><span>Tax</span>0/0</div>
+        <div class="stat"><span>Contract</span><code id="contractDisplay">0xYOUR_CONTRACT_ADDRESS_HERE</code></div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>Featured Memes</h2>
+      <div class="grid" id="galleryGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> MEOW OR NEVER</p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal hidden" id="buyModal">
+    <div class="modal-content">
+      <button class="close" id="modalClose">×</button>
+      <h3>Buy $MEOW (Demo)</h3>
+      <label>Amount (ETH)</label>
+      <input id="buyAmount" type="number" min="0" step="0.01" placeholder="0.1" />
+      <p id="estMeow">—</p>
+      <div class="modal-actions">
+        <button id="execBuy" class="btn primary">Simulate Buy</button>
+        <button id="cancelBuy" class="btn secondary">Cancel</button>
+      </div>
+      <small>⚠️ Demo only. Hook up to a real swap if needed.</small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
